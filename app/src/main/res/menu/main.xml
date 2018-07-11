@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/add_header"
+
+        android:title="add header" />
+    <item
+        android:id="@+id/remove_header"
+        android:title="remove header" />
+    <item
+        android:id="@+id/add_footer"
+        android:title="add footer" />
+    <item
+        android:id="@+id/remove_footer"
+        android:title="remove footer" />
+
+    <item
+        android:id="@+id/remove_all_items"
+        android:title="remove all items" />
+    <item
+        android:id="@+id/add_all_items"
+        android:title="add all items" />
+
+</menu>
