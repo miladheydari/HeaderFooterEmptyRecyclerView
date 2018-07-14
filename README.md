@@ -18,7 +18,7 @@ Add to the dependency
 ```
 
 # usage
-firs add HFERecyclerView and empty view to your layout
+first add HFERecyclerView and empty view to your layout
 ```xml
 <com.miladheydari.hferecyclerview.HFERecyclerView
         android:id="@+id/recycler"
@@ -34,7 +34,7 @@ firs add HFERecyclerView and empty view to your layout
         android:visibility="gone" />
 ```
 **your adapter must extend HFEAdapter<T>**  
-T is type of your data list and must use getItem(position) for get item of list data
+T is type of your data list and must use getItem(position) for geting item of list data
 ```kotlin
 class Adapter(_data: List<String>?) : HFEAdapter<String>(_data) {
     override fun getItemView(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {
@@ -110,4 +110,4 @@ set header for HFERecyclerView and remove header with pass null
 ```kotlin
 hfeRecyclerView.emtyView = view
 ```
-set emptyView to recylcer view **optinal
+set emptyView to recylcer view **optional
