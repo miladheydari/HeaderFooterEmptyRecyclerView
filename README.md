@@ -91,8 +91,8 @@ class MainActivity : AppCompatActivity() {
         adapter = Adapter(listString)
         hfeRecyclerView.adapter = adapter
 
-        hfeRecyclerView.setFooter(LayoutInflater.from(this).inflate(R.layout.footer, null))
-        hfeRecyclerView.setHeader(LayoutInflater.from(this).inflate(R.layout.header, null))
+        hfeRecyclerView.setFooter(LayoutInflater.from(this).inflate(R.layout.footer,hfeRecyclerView, false))
+        hfeRecyclerView.setHeader(LayoutInflater.from(this).inflate(R.layout.header,hfeRecyclerView, false))
 
     }
 }
