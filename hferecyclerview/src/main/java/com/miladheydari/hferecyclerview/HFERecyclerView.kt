@@ -49,4 +49,15 @@ class HFERecyclerView : RecyclerView {
     fun setFooter(view: View?) {
         (adapter as HFEAdapter<*>).footer = view
     }
+
+    fun getFooter(): View? {
+        return (adapter as HFEAdapter<*>).footer
+
+    }
+
+
+    fun getHeader(): View? {
+        return (adapter as HFEAdapter<*>).header
+    }
+
 }
