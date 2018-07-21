@@ -8,9 +8,10 @@ import android.widget.TextView
 import com.miladheydari.hferecyclerview.HFEAdapter
 
 class Adapter(_data: List<String>?) : HFEAdapter<String>(_data) {
-    override fun getItemView(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {
+    override fun getItemView(inflater: LayoutInflater, parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
-        return ViewHolder(inflater.inflate(R.layout.row, parent,false))
+
+        return ViewHolder(inflater.inflate(R.layout.row, parent, false))
 
     }
 

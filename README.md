@@ -13,7 +13,7 @@ Add to the dependency
 	dependencies {
             implementation 'com.android.support:recyclerview-v7:27.1.1'            //required
 
-            implementation 'com.miladheydari:headerfooteremptyrecyclerview:1.1.0'
+            implementation 'com.miladheydari:headerfooteremptyrecyclerview:1.2.0'
 	}
 ```
 

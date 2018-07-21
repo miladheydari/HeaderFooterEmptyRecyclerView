@@ -34,7 +34,7 @@ abstract class HFEAdapter<T>(_data: List<T>?) : RecyclerView.Adapter<RecyclerVie
         }
 
 
-    protected abstract fun getItemView(inflater: LayoutInflater, parent: ViewGroup): RecyclerView.ViewHolder
+    protected abstract fun getItemView(inflater: LayoutInflater, parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder
 
 
     private fun getHeaderView(inflater: LayoutInflater, parent: ViewGroup): RecyclerView.ViewHolder? = if (header != null) HeaderViewHolder(header!!) else null
@@ -47,7 +47,7 @@ abstract class HFEAdapter<T>(_data: List<T>?) : RecyclerView.Adapter<RecyclerVie
         return when (viewType) {
             TYPE_HEADER -> getHeaderView(inflater, parent)!!
             TYPE_FOOTER -> getFooterView(inflater, parent)!!
-            else -> getItemView(inflater, parent)
+            else -> getItemView(inflater, parent, viewType)
         }
 
     }
