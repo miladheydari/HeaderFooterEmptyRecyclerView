@@ -9,18 +9,18 @@ import android.view.ViewGroup
 abstract class HFEAdapter<T>(_data: List<T>?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
-        private const val TYPE_HEADER = 0
-        private const val TYPE_ITEM = 1
-        private const val TYPE_FOOTER = 2
+        const val TYPE_HEADER = 0
+        const val TYPE_FOOTER = 1
+        const val TYPE_ITEM = 2
 
     }
 
-     var header: View? = null
+    var header: View? = null
         set(value) {
             field = value
             notifyDataSetChanged()
         }
-     var footer: View? = null
+    var footer: View? = null
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -45,11 +45,9 @@ abstract class HFEAdapter<T>(_data: List<T>?) : RecyclerView.Adapter<RecyclerVie
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         return when (viewType) {
-            TYPE_ITEM -> getItemView(inflater, parent)
             TYPE_HEADER -> getHeaderView(inflater, parent)!!
             TYPE_FOOTER -> getFooterView(inflater, parent)!!
-            else -> throw RuntimeException("there is no type that matches the type " + viewType + " + " +
-                    "make sure your using types correctly")
+            else -> getItemView(inflater, parent)
         }
 
     }
