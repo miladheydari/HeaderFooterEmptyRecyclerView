@@ -1,4 +1,4 @@
-# android RecyclerView support Header Footer and Empty list
+# Android RecyclerView support Header Footer and Empty list
 
 
 ***
